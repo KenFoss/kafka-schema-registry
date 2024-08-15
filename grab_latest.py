@@ -83,7 +83,7 @@ def copy_files(project_dir, registry_dir):
         print(f"Copied {jar_file} to {destination}")
 
     # Copy POM file
-    destination_pom = os.path.join(target_dir, f'{artifact_id}-{version}.xml')
+    destination_pom = os.path.join(target_dir, f'{artifact_id}-{version}.pom')
     if os.path.exists(destination_pom):
         os.remove(destination_pom)
     shutil.copy(pom_file, destination_pom)
